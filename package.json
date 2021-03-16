@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "start": "npm run start-server & npm run start-client",
+    "start": "concurrently  \"npm run start-server\" \"npm run start-client\"",
     "start-client": "webpack serve --mode development",
     "start-server": "nodemon --exec babel-node server/meli.js",
-    "copy": "copyfiles -f ./src/client/index.html ./dist",
-    "build": "webpack --mode production -- --ASSET_PATH:ad"
+    "build": "webpack --mode production"
   },
   "author": "Johan Cuberos Grisales",
   "license": "ISC",
@@ -26,7 +25,7 @@
     "babel-polyfill": "^6.26.0",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
-    "copyfiles": "^2.4.1",
+    "concurrently": "^6.0.0",
     "cors": "^2.8.5",
     "css-loader": "^5.1.2",
     "eslint": "^7.22.0",

@@ -3,8 +3,6 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-// const ASSET_PATH = process.env.ASSET_PATH || '/';
-
 module.exports = {
     context: path.resolve(__dirname, 'client/src'),
     entry: {
@@ -75,9 +73,6 @@ module.exports = {
         historyApiFallback: true
     },
     plugins: [
-        // new webpack.DefinePlugin({
-        //     'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
-        // }),
         new MiniCssExtractPlugin({
             filename: 'styles.css'
         }),
