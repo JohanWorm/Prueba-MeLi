@@ -1,0 +1,43 @@
+.product {
+
+    &__main {
+        display: block;
+
+        @media (min-width: 991px) {
+            display: flex;
+        }
+
+        &-image {
+            width: 100%;
+            text-align: center;
+        }
+
+        &-data {
+            @media (min-width: 991px) {
+                width: 400px;
+            }
+
+            &-title {
+                font-family: 'Roboto-Bold';
+                font-size: 24px;
+            }
+
+            &-price {
+                display: flex;
+                font-size: 32px;
+                margin: 10px 0 40px 0;
+            }
+
+            &-decimals {
+                font-size: 17px;
+                top: 3px;
+                position: relative;
+            }
+        }
+    }
+
+    &--description {
+        margin: 30px 0;
+        overflow: hidden;
+    }
+}

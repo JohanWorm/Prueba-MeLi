@@ -1,0 +1,24 @@
+@import 'assets/styles/variables.scss';
+
+.header {
+    background-color: $yellow;
+    height: $height-header;
+    display: flex;
+    box-sizing: content-box;
+
+    >div {
+        margin-right: 40px;
+        padding: 10px 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .logo {
+        img {
+            box-sizing: content-box;
+            height: 100%;
+        }
+    }
+}
